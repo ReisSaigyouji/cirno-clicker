@@ -31,3 +31,20 @@ p {
 #click:active {
     background-color: dodgerblue;
 }
+
+.upgrade {
+    padding-left: 3rem;
+}
+#upgrade {
+    font-size: 2rem;
+    color: white;
+    background-color: mediumblue;
+}
+
+#upgrade:active {
+    background-color: blue;
+}
+
+.upgrade p {
+    font-size: 2rem;
+}
