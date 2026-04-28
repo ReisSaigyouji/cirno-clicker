@@ -1,6 +1,15 @@
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
 
 .image {
@@ -11,4 +20,14 @@ main {
     align-content: center;
     align-items: center;
     font-size: 3rem;
+}
+
+#click {
+    color: white;
+    background-color: deepskyblue;
+    font-size: 3rem;
+}
+
+#click:active {
+    background-color: dodgerblue;
 }
