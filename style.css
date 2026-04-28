@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    padding: 2rem;
+}
+
+.clicker {
+    align-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
