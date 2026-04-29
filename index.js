@@ -7,10 +7,20 @@ const upbtn = document.getElementById('upgrade');
 const cost = document.getElementById('cost');
 const prices = [20, 50, 100, 300, 600, 999]
 var price = prices[0];
+const cirno = document.getElementById('cirno');
+var stage = 1
 
 clickbtn.onclick = function() {
     count += power;
     counter.innerText = count;
+    if (count >= 99 && stage === 1) {
+        cirno.src = './img/c2.png';
+        stage++
+    }
+    else if (count >= 999 && stage === 2) {
+        cirno.src = './img/c3.png';
+        stage++
+    }
 }
 
 upbtn.onclick = function() {
@@ -30,3 +40,4 @@ upbtn.onclick = function() {
         cost.innerText = `Need ${price - count} more coins for next upgrade!`;
     }
 }
+
