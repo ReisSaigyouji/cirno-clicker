@@ -11,6 +11,7 @@ const cirno = document.getElementById('cirno');
 var stage = 1
 
 clickbtn.onclick = function() {
+    cirno.classList.add('pulse');
     count += power;
     counter.innerText = count;
     if (count >= 99 && stage === 1) {
@@ -21,7 +22,16 @@ clickbtn.onclick = function() {
         cirno.src = './img/c3.png';
         stage++
     }
+
+    if (count >= 9999) {
+        counter.innerText = '9999! You won!';
+        clickbtn.style.display = 'none';
+    }
 }
+
+cirno.addEventListener('animationend', () => {
+    cirno.classList.remove('pulse');
+});
 
 upbtn.onclick = function() {
     if (count >= price && i < prices.length) {
@@ -34,6 +44,7 @@ upbtn.onclick = function() {
             cost.innerText = `Upgrade cost: ${price}`;
         } else {
             cost.innerText = 'Maximal upgrade!';
+            upbtn.style.display = 'none';
         }
     }
     else if (i < prices.length && count < price) {
